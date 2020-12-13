@@ -25,6 +25,6 @@ collections:
     create: true
     identifier_field: name
     fields:
-      - {label: "Title", name: "Title", widget: "string"}
-        {label: "Publish Date", name: "Publish Date", widget: "datetime"}
-        {label: "Featured Image", name: "thumbnail", widget: "image"}
+      - { label: "Title", name: "Title", widget: "string"}
+        { label: "Publish Date", name: "Publish Date", widget: "datetime"}
+        { label: "Featured Image", name: "thumbnail", widget: "image"}
