@@ -4,7 +4,7 @@
             <img class="card-img-top" :src="item.thumbnail[0]" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{item.Title}}</h5>
-                <p class="card-text" :document="item.body"></p>
+                <div class="card-text"><nuxt-content :document="item"/></div>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>

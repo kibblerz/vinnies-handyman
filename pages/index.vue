@@ -6,7 +6,7 @@
   </div>
   <div class="card-body">
     <h5 class="card-title">{{ item.description  }}</h5>
-    <div class="card-text" :document="item.body"></div>
+    <nuxt-content class="card-text" :document="item"/>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
