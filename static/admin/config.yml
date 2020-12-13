@@ -13,7 +13,7 @@ media_library:
     multiple: true
     
 collections:
-  - name: 'blog'
+  - name: 'Blog'
     label: 'Blog'
     folder: 'assets/content/blog'
     format: 'frontmatter'

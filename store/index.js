@@ -1,15 +1,19 @@
 export const state = () => ({
-  gallery: [],
+  gallery: {},
 })
 
 export const mutations = {
-  setCareers: (state, list) => (state.gallery = list),
+  setGallery: (state, list) => (state.gallery = list),
 }
 
 export const actions = {
-  async nuxtServerInit({ commit }, { $content }) {
-    const gallery = await $content('Gallery').fetch()
+  async nuxtServerInit({ commit }){
+    let gallery = await require.context(
+      "~/assets/content/gallery/",
+      false,
+      /\.json$/
+    );
 
-    await commit('setGallery', careers)
+    await commit('setGallery', gallery)
   },
 }

@@ -23,6 +23,14 @@ export default {
     data: function () {
        return {}
     },
+    async asyncData({ $content }) {
+        const gallery = await $content('gallery').fetch()
+        const blog = await $content('blog').fetch()
+        return {
+        gallery,
+        blog
+        }
+    },
     computed: {
         test(){
             let list = []
