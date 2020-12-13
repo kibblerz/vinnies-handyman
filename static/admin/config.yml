@@ -29,9 +29,11 @@ collections:
   - name: 'Gallery'
     label: 'Gallery'
     folder: 'content/gallery'
+    format: 'frontmatter'
     create: true
     identifier_field: Title 
     fields:
       - { label: "Title", name: "Title", widget: "string" }
       - { label: "Publish Date", name: "Publish Date", widget: "datetime" }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }

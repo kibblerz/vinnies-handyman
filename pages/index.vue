@@ -1,12 +1,12 @@
 <template>
     <div>
-    <div class="card m-4 p-1 w-75 float-right" v-for="item in test">
+    <div class="card m-4 p-1 w-75 float-right" v-for="item in blog">
   <div class="card-header">
-    Featured
+    {{ item.title  }}
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h5 class="card-title">{{ item.description  }}</h5>
+    <div class="card-text" :document="item.body"></div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+const parseMarkdown = require('front-matter-markdown')
+
 export default {
     head() {
         return {
@@ -39,6 +41,8 @@ export default {
             }
             return list
         }
+    },
+    methods: {
     }
 }
 </script>

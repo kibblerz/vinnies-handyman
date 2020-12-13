@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="card m-2 p-1 d-inline-block float-right" style="width: 18rem;" v-for="item in test">
-            <img class="card-img-top" src="~/assets/test.jpg" alt="Card image cap">
+        <div class="card m-2 p-1 d-inline-block float-right" style="width: 18rem;" v-for="item in gallery">
+            <img class="card-img-top" :src="item.thumbnail[0]" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title">{{item.Title}}</h5>
+                <p class="card-text" :document="item.body"></p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
@@ -13,19 +13,35 @@
 
 <script>
 export default {
-    data: function () {
-       return {}
-    },
-    computed: {
-        test(){
-            let list = []
-            for(let i = 0; i < 15; i++){
-                list.push('test')        
-            }
-            return list
-        }
-    }
+    head() {
+           return {
+               script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
+           }
+       },
+       data: function () {
+          return {}
+       },
+       async asyncData({ $content }) {
+           const gallery = await $content('gallery').fetch()
+           const blog = await $content('blog').fetch()
+           return {
+           gallery,
+           blog
+           }
+       },
+       computed: {
+           test(){
+               let list = []
+               for(let i = 0; i < 15; i++){
+                   list.push('test')
+               }
+               return list
+           }
+       },
+       methods: {
+       }
 }
+
 </script>
 
 <style>
