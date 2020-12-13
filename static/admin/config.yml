@@ -19,3 +19,12 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'Gallery'
+    label: "Galery"
+    folder: 'content/gallery'
+    create: true
+    identifier_field: name
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+        {label: "Publish Date", name: "Publish Date", widget: "datetime"}
+        {label: "Featured Image", name: "thumbnail", widget: "image"}
