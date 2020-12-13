@@ -10,6 +10,7 @@ media_library:
   config:
     cloud_name: 'da0qkxmiu'
     api_key: '674122141936431'
+    multiple: true
     
 collections:
   - name: 'blog'
