@@ -5,6 +5,12 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: 'da0qkxmiu'
+    api_key: '674122141936431'
+    
 collections:
   - name: 'blog'
     label: 'Blog'
