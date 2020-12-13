@@ -15,7 +15,7 @@ media_library:
 collections:
   - name: 'blog'
     label: 'Blog'
-    folder: 'content/blog'
+    folder: 'assets/content/blog'
     format: 'frontmatter'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -28,7 +28,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'Gallery'
     label: 'Gallery'
-    folder: 'content/gallery'
+    folder: 'assets/content/gallery'
     create: true
     identifier_field: Title 
     fields:
