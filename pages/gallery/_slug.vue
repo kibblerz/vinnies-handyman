@@ -3,7 +3,7 @@
         <div class="card m-2 p-1 d-inline-block float-right" style="width: 18rem;" v-for="item in gallery.before">
                 <img class="card-img-top" :src="item" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">After</h5>
+                    <h5 class="card-title">Before</h5>
                 </div>
             </div>
         <div class="card m-2 p-1 d-inline-block float-right" style="width: 18rem;" v-for="item in gallery.after">
