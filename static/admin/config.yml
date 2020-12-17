@@ -36,4 +36,9 @@ collections:
       - { label: "Title", name: "Title", widget: "string" }
       - { label: "Publish Date", name: "Publish Date", widget: "datetime" }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        allow_multiple: false
+      - { label: "Before Images", name: "before", widget: "image"}
+      - { label: "After Images", name: "after", widget: "image"}
