@@ -1,20 +1,21 @@
 <template>
   <div>
-  <div class="p-0 m-0 container-fluid w-100">
+<!--  <div class="p-0 m-0 container-fluid w-100">
     <img class="img-fluid w-100" src="~/assets/header.jpg" />
     <div class="bottom-right">Vinnie's Handyman Services</div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  -->
+  <nav class="navbar navbar-expand-lg">
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+            <NuxtLink class="nav-link" to="/">Home</NuxtLink>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/gallery">Gallery</a>
+            <NuxtLink class="nav-link" to="/gallery">Gallery</NuxtLink>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
+            <NuxtLink class="nav-link" to="/contact">Contact</NuxtLink>
         </li>
         </ul>
     <span class="navbar-text">
@@ -30,6 +31,23 @@
 </template>
 
 <style>
+.navbar {
+    background-color: white !important;
+    border-bottom: .5em solid black;
+    padding-bottom: 0px !important;
+}
+.navbar a {
+    color: black;
+}
+.navbar li {
+}
+.navbar-nav {
+    height: 100%;
+}
+.active {
+    color: white !important;
+    background-color: black;
+}
 .container-fluid {
   position: relative;
   text-align: center;
