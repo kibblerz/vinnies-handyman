@@ -3,9 +3,7 @@
         <div class="card m-2 p-1 d-inline-block float-right" style="width: 18rem;" v-for="item in gallery">
             <img class="card-img-top" :src="item.thumbnail[0]" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{item.Title}}</h5>
-                <div class="card-text"><nuxt-content :document="item"/></div>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">item</h5>
             </div>
         </div>
     </div>
@@ -21,8 +19,8 @@ export default {
        data: function () {
           return {}
        },
-       async asyncData({ $content }) {
-           const gallery = await $content('gallery').fetch()
+       async asyncData({ $content , params}) {
+           const gallery = await $content('gallery/'+params.slug).fetch()
            const blog = await $content('blog').fetch()
            return {
            gallery,
