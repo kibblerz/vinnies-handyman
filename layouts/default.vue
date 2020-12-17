@@ -115,4 +115,8 @@ body {
   color: #fff;
   background-color: #35495e;
 }
+.navbar-text{
+    font-weight: bold;
+    font-style: italic;
+}
 </style>
